@@ -1,41 +1,26 @@
 # DtoXlsxGenerator
 
-## Installation
+[![Latest Stable Version](https://img.shields.io/packagist/v/solitus0/dto-xlsx-generator?style=flat-square)](https://packagist.org/packages/solitus0/dto-xlsx-generator)
+[![Total Downloads](https://img.shields.io/packagist/dt/solitus0/dto-xlsx-generator?style=flat-square)](https://packagist.org/packages/solitus0/dto-xlsx-generator)
+[![License](https://img.shields.io/packagist/l/solitus0/dto-xlsx-generator?style=flat-square)](LICENSE)
 
-Make sure Composer is installed globally, as explained in the
-[installation chapter](https://getcomposer.org/doc/00-intro.md)
-of the Composer documentation.
+A lightweight Symfony bundle that converts **attribute-decorated DTOs** into fully populated **XLSX spreadsheets** using PhpSpreadsheet.
 
-### Applications that use Symfony Flex
+## Features
 
-Open a command console, enter your project directory and execute:
+- Attribute-first API: describe spreadsheet layouts directly on PHP DTOs.
+- Inline and multi-sheet collection support with automatic parent-child linking.
 
-```console
-$ composer require solitus0/dto-xlsx-generator
+## Quick Start
+
+```bash
+composer require solitus0/dto-xlsx-generator
 ```
 
-### Applications that don't use Symfony Flex
+Register the bundle in `config/bundles.php`, add spreadsheet attributes to your DTOs, then inject `Solitus0\DtoXlsxGenerator\Services\SpreadsheetGenerator` to build workbooks. The full walk-through lives in the [Generate Your First Spreadsheet tutorial](docs/tutorials/getting-started.md).
 
-#### Step 1: Download the Bundle
+## Documentation (Diátaxis)
 
-Open a command console, enter your project directory and execute the
-following command to download the latest stable version of this bundle:
-
-```console
-$ composer require solitus0/dto-xlsx-generator
-```
-
-#### Step 2: Enable the Bundle
-
-Then, enable the bundle by adding it to the list of registered bundles
-in the `config/bundles.php` file of your project:
-
-```php
-// config/bundles.php
-
-return [
-    // ...
-    Solitus0\DtoXlsxGenerator\DtoXlsxGenerator::class => ['all' => true],
-];
-```
-# dto-xlsx-generator
+- [Tutorial](docs/tutorials/getting-started.md) – learn the workflow end-to-end.
+- How-to guides: [model collections](docs/how-to/model-collections.md), [validate DTOs](docs/how-to/validate-dtos.md), [deliver XLSX files](docs/how-to/deliver-files.md).
+- Reference: [attributes](docs/reference/attributes.md) and [services & configuration](docs/reference/services.md).
